@@ -73,21 +73,20 @@ export default {
     GraphYearPlanFact,
   },
   setup(){
-    const today = new Date();
-    //var dd = String(today.getDate()).padStart(2, '0');
-    //var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    /*const today = new Date();
     const year = today.getFullYear();
-
     const month = Number(today.getMonth() + 1);
     let quarter = (month < 4) ? 1 : (month < 7) ? 2 : (month < 10) ? 3 : 4;
     console.log(quarter);
     console.log(year);
-    return {year, quarter}
+    return { year, quarter }*/
   },
   data() {
     return {
-      //yearList: [{value:2021}, {value:2020}, {value:2019}],
       yearList: null,
+      year: null,
+      quarter: 1,
+      apiData: null,
       selectedYear: '',
       selectedQuarter: '',
       quarterData: {
@@ -115,14 +114,25 @@ export default {
     }
   },
   created() {
+
     EventService.getYearList().then(response => {
-      console.log(response.data);
-      console.log(Object.values(response.data.year));
-      this.yearList = Array.from(response.data);
+      this.yearList = response.data;
+      this.year = this.yearList[0];
       console.log(this.yearList);
+      console.log(this.year);
+
+      EventService.getYearData(this.year).then(resp => {
+        this.apiData = resp.data;
+        console.log(this.apiData);
+      }).catch(error => {
+        console.log(error);
+      });
+
     }).catch(error => {
       console.log(error);
     });
+
+
   }
 };
 </script>

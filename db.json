@@ -1,5 +1,5 @@
 {
-  "yearList": [2021, 2020, 2019, 2018, 2017],
+  "yearList": [2021, 2020, 2019, 2018],
   "2019": [
     {"plan": [
       {"q1": [
@@ -136,6 +136,76 @@
         {"distributor": 21565271},
         {"external": 1346516},
         {"c3d-labs": 8909169},
+        {"other": 0}
+      ]}
+    ]}
+  ],
+  "2021": [
+    {"plan": [
+      {"q1": [
+        {"integrator": 96866816},
+        {"partner": 25122568},
+        {"distributor": 24084848},
+        {"external": 212031},
+        {"c3d-labs": 8575625},
+        {"other": 0}
+      ]},
+      {"q2": [
+        {"integrator": 89251522},
+        {"partner": 22270398},
+        {"distributor": 25696146},
+        {"external": 420000},
+        {"c3d-labs": 8482500},
+        {"other": 700000}
+      ]} ,
+      {"q3": [
+        {"integrator": 94840152},
+        {"partner": 25058013},
+        {"distributor": 25574270},
+        {"external": 300000},
+        {"c3d-labs": 3381500},
+        {"other": 0}
+      ]} ,
+      {"q4": [
+        {"integrator": 170923737},
+        {"partner": 36198266},
+        {"distributor": 31771128},
+        {"external": 600000},
+        {"c3d-labs": 8312750},
+        {"other": 3850000}
+      ]}
+    ]},
+    {"fact": [
+      {"q1": [
+        {"integrator": 103493059},
+        {"partner": 24900740},
+        {"distributor": 26275595},
+        {"external": 414341},
+        {"c3d-labs": 9066974},
+        {"other": 2400000}
+      ]},
+      {"q2": [
+        {"integrator": 161217755},
+        {"partner": 38585560},
+        {"distributor": 21672300},
+        {"external": 999191},
+        {"c3d-labs": 8256660},
+        {"other": 0}
+      ]},
+      {"q3": [
+        {"integrator": 187172327},
+        {"partner": 26324074},
+        {"distributor": 29161861},
+        {"external": 72585},
+        {"c3d-labs": 8320935},
+        {"other": 0}
+      ]},
+      {"q4": [
+        {"integrator": 0},
+        {"partner": 0},
+        {"distributor": 0},
+        {"external": 0},
+        {"c3d-labs": 0},
         {"other": 0}
       ]}
     ]}
