@@ -7,10 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 
 import HighchartsVue from "highcharts-vue";
-//import Highcharts from "highcharts";
-//import hcMore from "highcharts/highcharts-more";
-
-//hcMore(Highcharts);
 
 createApp(App)
   .use(store)

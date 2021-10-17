@@ -62,14 +62,9 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import EventService from '@/services/EventService';
 import GraphYearSpeed from "@/components/GraphYearSpeed";
-//import EventService from '@/services/EventService';
 import GraphYearPlanFact from "@/components/GraphYearPlanFact.vue";
-
-//TODO
-// 1. yearList ()
-
 
 export default {
   name: "Dashboard",
@@ -92,7 +87,7 @@ export default {
   data() {
     return {
       //yearList: [{value:2021}, {value:2020}, {value:2019}],
-      yearList: [2021, 2020, 2019],
+      yearList: null,
       selectedYear: '',
       selectedQuarter: '',
       quarterData: {
@@ -118,14 +113,16 @@ export default {
     changeSelectedQuarter(){
       this.quarter = this.selectedQuarter;
     }
-  }
-  /*created() {
-    EventService.getEvents().then(response => {
+  },
+  created() {
+    EventService.getYearList().then(response => {
       console.log(response.data);
+      this.yearList = Object.values(response.data);
+      console.log(this.yearList);
     }).catch(error => {
       console.log(error);
     });
-  }*/
+  }
 };
 </script>
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'https://server',
+  baseURL: 'https://my-json-server.typicode.com/ImSnake/kpi-dashboard/',
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -10,7 +10,7 @@ const apiClient = axios.create({
 });
 
 export default {
-  getEvents() {
-    return apiClient.get('/api-recuest')
+  getYearList() {
+    return apiClient.get('/yearList')
   }
 }

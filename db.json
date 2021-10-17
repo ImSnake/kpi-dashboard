@@ -1,23 +1,79 @@
 {
   "yearList": [
-    {
-      "year": 2021
-    },
-    {
-      "year": 2020
-    },
-    {
-      "year": 2019
-    },
-    {
-      "year": 2018
-    },
-    {
-      "year": 2017
-    }
+    {"year": 2021},
+    {"year": 2020},
+    {"year": 2019},
+    {"year": 2018},
+    {"year": 2017}
   ],
- "2020": [
-   {"plan": 0},
-   {"fact": 0}
+  "2020": [
+    {"plan": [
+      {"q1": [
+        {"integrator": 74732560},
+        {"partner": 12963005},
+        {"distributor": 18323884},
+        {"external": 708240},
+        {"c3d-labs": 0},
+        {"other": 9332700}
+      ]},
+      {"q2": [
+        {"integrator": 73865367},
+        {"partner": 15144174},
+        {"distributor": 17459219},
+        {"external": 1212660},
+        {"c3d-labs": 0},
+        {"other": 12161350}
+      ]} ,
+      {"q3": [
+        {"integrator": 80798468},
+        {"partner": 17881432},
+        {"distributor": 18160902},
+        {"external": 1478250},
+        {"c3d-labs": 0},
+        {"other": 7812200}
+      ]} ,
+      {"q4": [
+        {"integrator": 136804658},
+        {"partner": 27679288},
+        {"distributor": 32281916},
+        {"external": 2605465},
+        {"c3d-labs": 0},
+        {"other": 15810000}
+      ]}
+    ]},
+    {"fact": [
+      {"q1": [
+        {"integrator": 95737046},
+        {"partner": 16437399},
+        {"distributor": 30520172},
+        {"external": 81410},
+        {"c3d-labs": 7385943},
+        {"other": 8412}
+      ]},
+      {"q2": [
+        {"integrator": 95531730},
+        {"partner": 14280355},
+        {"distributor": 22256736},
+        {"external": 133758},
+        {"c3d-labs": 3769445},
+        {"other": 312000}
+      ]},
+      {"q3": [
+        {"integrator": 90616271},
+        {"partner": 20911244},
+        {"distributor": 19307968},
+        {"external": 408522},
+        {"c3d-labs": 4314610},
+        {"other": 162219}
+      ]},
+      {"q4": [
+        {"integrator": 223007780},
+        {"partner": 26810110},
+        {"distributor": 21565271},
+        {"external": 1346516},
+        {"c3d-labs": 8909169},
+        {"other": 0}
+      ]}
+    ]}
   ]
 }
