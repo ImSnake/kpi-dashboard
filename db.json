@@ -1,5 +1,75 @@
 {
   "yearList": [2021, 2020, 2019, 2018, 2017],
+  "2019": [
+    {"plan": [
+      {"q1": [
+        {"integrator": 65017036},
+        {"partner": 9000007},
+        {"distributor": 15349250},
+        {"external": 811486},
+        {"c3d-labs": 0},
+        {"other": 16108358}
+      ]},
+      {"q2": [
+        {"integrator": 68827448},
+        {"partner": 12477826},
+        {"distributor": 17580415},
+        {"external": 508235},
+        {"c3d-labs": 0},
+        {"other": 22369916}
+      ]} ,
+      {"q3": [
+        {"integrator": 76769519},
+        {"partner": 17764092},
+        {"distributor": 19981244},
+        {"external": 1883209},
+        {"c3d-labs": 0},
+        {"other": 20697670}
+      ]} ,
+      {"q4": [
+        {"integrator": 128686184},
+        {"partner": 27169533},
+        {"distributor": 27706162},
+        {"external": 3459378},
+        {"c3d-labs": 0},
+        {"other": 29876464}
+      ]}
+    ]},
+    {"fact": [
+      {"q1": [
+        {"integrator": 72525351},
+        {"partner": 13206013},
+        {"distributor": 20201248},
+        {"external": 92641},
+        {"c3d-labs": 6276994},
+        {"other": 32363}
+      ]},
+      {"q2": [
+        {"integrator": 78476592},
+        {"partner": 21411512},
+        {"distributor": 18105901},
+        {"external": 36515},
+        {"c3d-labs": 1484717},
+        {"other": 0}
+      ]},
+      {"q3": [
+        {"integrator": 98318890},
+        {"partner": 16462528},
+        {"distributor": 21219133},
+        {"external": 7420},
+        {"c3d-labs": 2044422},
+        {"other": 6992}
+      ]},
+      {"q4": [
+        {"integrator": 136528980},
+        {"partner": 24365602},
+        {"distributor": 31569233},
+        {"external": 1931363},
+        {"c3d-labs": 6881082},
+        {"other": 14617}
+      ]}
+    ]}
+  ],
   "2020": [
     {"plan": [
       {"q1": [
