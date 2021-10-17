@@ -117,7 +117,8 @@ export default {
   created() {
     EventService.getYearList().then(response => {
       console.log(response.data);
-      this.yearList = Object.values(response.data);
+      console.log(Object.values(response.data.year));
+      this.yearList = Array.from(response.data);
       console.log(this.yearList);
     }).catch(error => {
       console.log(error);
