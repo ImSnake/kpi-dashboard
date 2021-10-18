@@ -1,88 +1,5 @@
 <template>
 
-  <div class="row mb-4">
-    <div>
-      <button class="btn btn-primary"
-              data-bs-target="#collapseTarget"
-              data-bs-toggle="collapse"
-      >Выпадающий текст
-      </button>
-      <div class="collapse py-2" id="collapseTarget">This is the toggle-able content!</div>
-    </div>
-  </div>
-
-  <div class="row mt-5 mb-5">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="row mt-5">
-    <div>
-      <button type="button" class="btn btn-success btn-sm">Просто кнопка</button>
-    </div>
-  </div>
-
-  <div class="row mt-5">
-    <table class="table table-dark table-sm">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-
   <div class="row mt-5">
     <form class="row gy-2 gx-3 align-items-center">
       <div class="col-auto">
@@ -129,8 +46,222 @@
     </form>
   </div>
 
+  <div class="row mt-5 mb-5">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
+  <div class="row mb-5">
+    <div>
+      <button class="btn btn-primary"
+              data-bs-target="#collapseTarget"
+              data-bs-toggle="collapse"
+      >Выпадающий текст
+      </button>
+      <div class="collapse py-2" id="collapseTarget">This is the toggle-able content!</div>
+    </div>
+  </div>
 
+  <div class="row mt-5">
+    <div>
+      <button type="button" class="btn btn-success btn-sm">Просто кнопка</button>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="table-responsive">
+      <table class="table table-dark table-sm">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1,001</td>
+          <td>random</td>
+          <td>data</td>
+          <td>placeholder</td>
+          <td>text</td>
+        </tr>
+        <tr>
+          <td>1,002</td>
+          <td>placeholder</td>
+          <td>irrelevant</td>
+          <td>visual</td>
+          <td>layout</td>
+        </tr>
+        <tr>
+          <td>1,003</td>
+          <td>data</td>
+          <td>rich</td>
+          <td>dashboard</td>
+          <td>tabular</td>
+        </tr>
+        <tr>
+          <td>1,003</td>
+          <td>information</td>
+          <td>placeholder</td>
+          <td>illustrative</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,004</td>
+          <td>text</td>
+          <td>random</td>
+          <td>layout</td>
+          <td>dashboard</td>
+        </tr>
+        <tr>
+          <td>1,005</td>
+          <td>dashboard</td>
+          <td>irrelevant</td>
+          <td>text</td>
+          <td>placeholder</td>
+        </tr>
+        <tr>
+          <td>1,006</td>
+          <td>dashboard</td>
+          <td>illustrative</td>
+          <td>rich</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,007</td>
+          <td>placeholder</td>
+          <td>tabular</td>
+          <td>information</td>
+          <td>irrelevant</td>
+        </tr>
+        <tr>
+          <td>1,008</td>
+          <td>random</td>
+          <td>data</td>
+          <td>placeholder</td>
+          <td>text</td>
+        </tr>
+        <tr>
+          <td>1,009</td>
+          <td>placeholder</td>
+          <td>irrelevant</td>
+          <td>visual</td>
+          <td>layout</td>
+        </tr>
+        <tr>
+          <td>1,010</td>
+          <td>data</td>
+          <td>rich</td>
+          <td>dashboard</td>
+          <td>tabular</td>
+        </tr>
+        <tr>
+          <td>1,011</td>
+          <td>information</td>
+          <td>placeholder</td>
+          <td>illustrative</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,012</td>
+          <td>text</td>
+          <td>placeholder</td>
+          <td>layout</td>
+          <td>dashboard</td>
+        </tr>
+        <tr>
+          <td>1,013</td>
+          <td>dashboard</td>
+          <td>irrelevant</td>
+          <td>text</td>
+          <td>visual</td>
+        </tr>
+        <tr>
+          <td>1,014</td>
+          <td>dashboard</td>
+          <td>illustrative</td>
+          <td>rich</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>1,015</td>
+          <td>random</td>
+          <td>tabular</td>
+          <td>information</td>
+          <td>text</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div :v-if="planned" class="container">
+  <div class="container">
     <highcharts :options="chartOptions"></highcharts>
   </div>
 </template>

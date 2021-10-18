@@ -4,7 +4,7 @@
     <div class="row align-items-start mt-4">
       <h1>Динамика выполнения плана</h1>
 
-      <div class="col">
+      <div v-if="yearData.planned > 0" class="col">
 
         <div class="d-flex flex-row bd-highlight mt-3 mb-4">
           <select v-model="selectedYear" @change="changeSelectedYear" class="form-select" aria-label="Default select example">
@@ -22,7 +22,7 @@
 
       </div>
 
-      <div class="col">
+      <div v-if="quarterData.planned > 0"  class="col">
 
         <div class="d-flex flex-row bd-highlight mt-3 mb-4">
           <select v-model="selectedQuarter" @change="changeSelectedQuarter" class="form-select" aria-label="Default select example">
@@ -97,6 +97,10 @@ export default {
 
   created() {
     this.initDashboard();
+  },
+
+
+  computed: {
   },
 
   methods: {
