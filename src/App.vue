@@ -1,7 +1,9 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Дажбоард</router-link> |
-    <router-link to="/data">Данные</router-link>
+  <div class="container">
+    <div id="nav">
+        <router-link to="/">Дажбоард</router-link> |
+        <router-link to="/data">Данные</router-link>
+    </div>
   </div>
   <router-view />
 </template>
