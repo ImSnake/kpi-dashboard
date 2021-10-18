@@ -5,13 +5,19 @@
 </template>
 
 <script>
-import Highcharts from "highcharts";
+/*import Highcharts from "highcharts";
 import hcMore from "highcharts/highcharts-more";
 
-hcMore(Highcharts);
+hcMore(Highcharts);*/
 
 export default {
   name: "GraphYearPlanFact",
+
+  props:  {
+    //planned: { type: Object, required: true },
+    //current: { type: Object, required: true }
+  },
+
   data() {
     return {
       chartOptions: {
@@ -39,6 +45,7 @@ export default {
         },
 
         tooltip: {
+          //crosshairs: true,
           formatter: function () {
             return '<b>' + this.x + '</b><br/>' +
               this.series.name + ': ' + this.y + '<br/>' +
@@ -55,47 +62,52 @@ export default {
         series: [{
           name: 'Аскон интеграция',
           data: [50, 30, 40, 70],
-          color: 'rgba(165,170,217,1)',
+          color: 'rgb(39,101,161)',
           stack: 'План'
         }, {
           name: 'Франчайзи',
           data: [30, 20, 30, 50],
-          color: 'rgba(248,161,63,1)',
+          color: 'rgb(12,126,27)',
           stack: 'План'
         }, {
           name: 'Дистрибьюторы',
           data: [15, 13, 14, 17],
-          color: 'rgba(126,86,134,1)',
+          color: 'rgb(206,79,24)',
           stack: 'План'
         }, {
           name: 'Внешние рынки',
           data: [3, 4, 4, 2],
-          color: 'rgba(186,60,61,1)',
+          color: 'rgb(222,181,16)',
           stack: 'План'
         },  {
           name: 'Аскон интеграция',
           data: [60, 35, 45, 88],
-          color: 'rgba(165,170,217,1)',
+          color: 'rgb(39,101,161)',
           stack: 'Факт'
         }, {
           name: 'Франчайзи',
           data: [33, 23, 33, 55],
-          color: 'rgba(248,161,63,1)',
+          color: 'rgb(12,126,27)',
           stack: 'Факт'
         }, {
           name: 'Дистрибьюторы',
           data: [16, 15, 18, 19],
-          color: 'rgba(126,86,134,1)',
+          color: 'rgb(206,79,24)',
           stack: 'Факт'
         }, {
           name: 'Внешние рынки',
           data: [3, 4, 4, 2],
-          color: 'rgba(186,60,61,1)',
+          color: 'rgb(222,181,16)',
           stack: 'Факт'
         },  ]
       },
     };
   },
+
+  mounted() {
+
+  },
+
 };
 </script>
 

@@ -9,7 +9,7 @@
         <div class="d-flex flex-row bd-highlight mt-3 mb-4">
           <select v-model="selectedYear" @change="changeSelectedYear" class="form-select" aria-label="Default select example">
             <option selected disabled value="">Выбрать год</option>
-            <option v-for="year in yearList" :key="year" :value="year">{{ year }}</option>
+            <option v-for="year in yearList" :key="year" :value="year">{{ year }} год</option>
           </select>
         </div>
 
@@ -37,8 +37,8 @@
         <h2>{{ quarter }} квартал</h2>
 
         <GraphYearSpeed
-          :current="this.quarterData.current"
-          :planned="this.quarterData.planned"
+          :current="quarterData.current"
+          :planned="quarterData.planned"
         />
       </div>
     </div>
@@ -47,17 +47,15 @@
 
       <h1>Динамика за {{ year }} по каналам</h1>
 
-      <GraphYearPlanFact />
+    <GraphYearPlanFact
+        :planned="apiData[this.year][0]['plan']"
+        :current="apiData[this.year][1]['fact']"/>
 
     </div>
 
     <div class="row align-items-start mt-3">
     </div>
 
-    <!--          <button type="button" class="btn btn-success btn-sm">1 кв</button>
-      <button type="button" class="btn btn-success btn-sm">2 кв</button>
-      <button type="button" class="btn btn-success btn-sm">3 кв</button>
-      <button type="button" class="btn btn-success btn-sm">4 кв</button>-->
   </div>
 </template>
 
@@ -72,74 +70,110 @@ export default {
     GraphYearSpeed,
     GraphYearPlanFact,
   },
-  setup(){
-    /*const today = new Date();
-    const year = today.getFullYear();
-    const month = Number(today.getMonth() + 1);
-    let quarter = (month < 4) ? 1 : (month < 7) ? 2 : (month < 10) ? 3 : 4;
-    console.log(quarter);
-    console.log(year);
-    return { year, quarter }*/
-  },
+
   data() {
     return {
       yearList: null,
-      year: null,
+      year: new Date().getFullYear(),
       quarter: 1,
-      apiData: null,
+      apiData: {},
       selectedYear: '',
       selectedQuarter: '',
       quarterData: {
-        title: "Квартальный план",
-        current: 150,
-        planned: 116,
+        current: 0,
+        planned: 0,
       },
       yearData: {
-        title: "Годовой план",
-        current: 250,
-        planned: 577,
+        current: 0,
+        planned: 0,
       },
+      dynamic: {
+        'plan': {},
+        'fact': {}
+      }
+
     };
   },
+
+  created() {
+    this.initDashboard();
+  },
+
   methods: {
+
+    async apiGetYearData() {
+      const response = await EventService.getYearData(this.year);
+      this.apiData[this.year] = response.data;
+      let count = this.apiData[this.year];
+
+      count.forEach(type => {
+        Object.values(type).forEach(qt => {
+          let sumY = 0;
+          Object.values(qt).forEach(quarter => {
+            let sumQ = 0;
+            Object.values(quarter).forEach(tt => {
+              Object.values(tt).forEach(xx => {
+                sumQ += +Object.values(xx);
+                sumY += +Object.values(xx);
+              });
+            });
+            quarter.sumQ = Math.round(sumQ / 1000000, 2);
+          });
+          type.sumY = Math.round(sumY / 1000000, 2);
+        });
+      });
+
+      this.updateYearData();
+      this.updateQuarterData();
+    },
+
     changeSelectedYear(){
       if (this.year !== this.selectedYear) {
         this.quarter = 1;
         this.selectedQuarter = 1;
       }
+
       this.year = this.selectedYear;
+
+      if (Object.keys(this.apiData).indexOf(String(this.year)) < 0) {
+        this.apiGetYearData();
+      }
+
+      this.updateYearData();
+      this.updateQuarterData();
     },
+
     changeSelectedQuarter(){
       this.quarter = this.selectedQuarter;
-    }
-  },
-  created() {
+      this.updateQuarterData();
+    },
 
-    EventService.getYearList().then(response => {
+    async initDashboard() {
+      const response = await EventService.getYearList();
       this.yearList = response.data;
       this.year = this.yearList[0];
-      console.log(this.yearList);
-      console.log(this.year);
+      this.apiGetYearData();
+    },
 
-      EventService.getYearData(this.year).then(resp => {
-        this.apiData = resp.data;
-        console.log(this.apiData);
-      }).catch(error => {
-        console.log(error);
-      });
+    updateQuarterData(){
+      let num = this.quarter-1;
+      this.quarterData = {
+        planned: this.apiData[this.year][0]['plan'][num].sumQ,
+        current: this.apiData[this.year][1]['fact'][num].sumQ
+      }
+    },
 
-    }).catch(error => {
-      console.log(error);
-    });
+    updateYearData(){
+      this.yearData.planned = this.apiData[this.year][0].sumY;
+      this.yearData.current = this.apiData[this.year][1].sumY;
+    },
+
+  },
 
 
-  }
 };
 </script>
 
 <style scoped>
-.btn-success {
-  background-color: #42b983;
-  border-color: #42b983;
-}
+
 </style>

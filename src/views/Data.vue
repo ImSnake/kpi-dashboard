@@ -1,16 +1,14 @@
 <template>
-  <div class="demo container">
-    <!--    <img alt="Vue logo" src="../assets/logo.png" />-->
+  <div class="data container">
     <Test />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 import Test from "@/components/Test.vue";
 
 export default {
-  name: "Demo",
+  name: "Data",
   components: {
     Test,
   },
